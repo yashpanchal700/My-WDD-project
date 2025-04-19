@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Focus Keeper</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>FOCUS KEEPER</h1>
+  </header>
+
+  <main>
+    <div class="timer-display" id="timer">25:00</div>
+
+    <div class="timer-options">
+        <button class="focus" onclick="setTimer(25 * 60)">
+            <div class="icon">⏱️</div>
+            <strong>Focus</strong><br>25 min
+        </button>
+        <button class="short-break" onclick="setTimer(5 * 60)">
+            <div class="icon">☕</div>
+            <strong>Short Break</strong><br>5 min
+        </button>
+        <button class="long-break" onclick="setTimer(30 * 60)">
+            <div class="icon">🧘‍♂️</div>
+            <strong>Long Break</strong><br>30 min
+        </button>
+    </div>
+
+    
+    <div class="start-button">
+      <button onclick="startTimer()">
+        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="5,3 17,10 5,17" />
+        </svg>
+        Start focus timer
+      </button>
+      
+      <button id="muteButton" onclick="toggleSound()">
+        🔊
+      </button>
+    </div>
+
+    
+      
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+/* General Styling */
+@font-face {
+  font-family: 'CustomFont3';
+  src: url('montserrat.bold.ttf') format('truetype');
+}
+
+body {
+  font-family: 'CustomFont3';
+  background: linear-gradient(135deg, #18181a, #3a3c4a);
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background-image: url("1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+main label {
+  font-size: 1.2em;
+  text-shadow: #000000ac;
+}
+
+/* Header Styling */
+header {
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('birthdays.otf') format('truetype');
+}
+
+header h1 {
+  font-size: 6em;
+  font-family: 'CustomFont',sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.276);
+}
+
+/* Input Field Styling */
+input[type="datetime-local"] {
+  margin: 20px 0;
+  padding: 15px;
+  font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 250px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+input:focus {
+  transform: scale(1.05);
+  outline: none;
+  border: 2px solid #b1b1b1;
+}
+
+/* Button Styling */
+button {
+  padding: 15px 40px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(135deg, #002aa7, #db0096);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #1a009d, #bc0096);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  main {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .digit {
+    font-size: 3.5em;
+  }
+
+  button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+  }
+}
+
+/* Countdown Timer Container Styling */
+main {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Individual Digit Container */
+.digit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.digit:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Initially Hide Countdown Box */
+.countdown {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.countdown.show {
+  display: flex;
+  opacity: 1;
+}
+
+.countdown {
+  display: flex;
+  font-size: 1em;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 20px;
+  background: rgba(40, 40, 40, 0.8);
+  border: 1px solid rgba(100, 100, 100, 0.5);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.digit {
+  font-size: 3em;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(60, 60, 60, 0.7);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.label {
+  font-size: 1.2em;
+  margin-top: 5px;
+  color: #ccc;
+}
+
+
+@keyframes emojiOut {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(var(--translateX), var(--translateY)) rotate(var(--rotate));
+    opacity: 0;
+  }
+}
+
+/* Add a class for mirrored emojis */
+.mirrored {
+  transform: scaleX(-1);
+}
+
+main {
+  position: relative; /* Ensure the message is centered in the main box */
+}
+
+div.happy-birthday {
+  font-size: 2em;
+  font-family: 'CustomFont'; /* Apply your custom font */
+  color: #fff4f4;
+  background: linear-gradient(135deg,#fbff00 , #fbff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@font-face {
+  font-family: 'custom';
+  src: url('milk.otf') format('truetype');
+}
+
+.happy-birthday {
+  all:unset;
+  font-size: 7em;
+  font-family: 'custom' !important;
+  src: url('milk.otf') format('truetype');
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(200deg, #fBFF00, #fbff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  word-wrap: break-word; 
+  max-width: 90%; /* Limit width to fit inside the box */
+  box-sizing: border-box; /* Include padding within the defined dimensions */
+  overflow: hidden;
+}
+
+
+
+
+
+
+

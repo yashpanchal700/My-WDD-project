@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <div class="dropdown">
+      <button>Projects ▾</button>
+      <div class="dropdown-content">
+        <a href="BIRTHDAY EVE/p1.html">Birthday Greetings</a>
+        <a href="PROFESSIONAL WORK/p2.html">Professional Work</a>
+        <a href="TRAVEL/p3.html">Travel</a>
+        <a href="SPORTS/p4.html">Sports</a>
+        <a href="STUDY/p5.html">Focus Keeper</a>
+        <a href="Customized/p6.html">Customized Timer</a>
+      </div>
+    </div>
+    <nav>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Welcome to My Creative Space</h2>
+    <p>Countdown timers which will undoubtedly assist you!</p>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search timers like 'Travel', 'Focus Keeper'...">
+  </div>
+
+  <section class="projects" id="projects">
+    <div class="project" id="project1">
+      <img src="images/birthday-greetings.jpg" alt="Birthday Greetings">
+      <h3>Birthday Greetings</h3>
+      <p>Celebrate with style! Start your birthday countdown and make it memorable.</p>
+      <a href="BIRTHDAY EVE/p1.html">Explore</a>
+    </div>
+    <div class="project" id="project2">
+      <img src="images/professional-work.jpg" alt="Professional Work">
+      <h3>Professional Work</h3>
+      <p>Get meeting-ready with a clean, focused interface. Time your tasks like a pro.</p>
+      <a href="PROFESSIONAL WORK/p2.html">Explore</a>
+    </div>
+    <div class="project" id="project3">
+      <img src="images/travel.jpg" alt="Travel">
+      <h3>Travel</h3>
+      <p>Plan your getaway! Countdown your adventure and never miss a flight again.</p>
+      <a href="TRAVEL/p3.html">Explore</a>
+    </div>
+    <div class="project" id="project4">
+      <img src="images/sports.jpg" alt="Sports">
+      <h3>Sports</h3>
+      <p>Stay active and never miss a game. Set reminders for your favorite sports.</p>
+      <a href="SPORTS/p4.html">Explore</a>
+    </div>
+    <div class="project" id="project5">
+      <img src="images/focus-keeper.jpg" alt="Focus Keeper">
+      <h3>Focus Keeper</h3>
+      <p>Boost your productivity with smart timers and break reminders for study sessions.</p>
+      <a href="STUDY/p5.html">Explore</a>
+    </div>
+    <div class="project" id="project6">
+      <img src="images/customized-timer.jpg" alt="Customized Timer">
+      <h3>Customized Timer</h3>
+      <p>Create your own personalized timers for your daily routine.</p>
+      <a href="Customized/p6.html">Explore</a>
+    </div>
+  </section>
+
+
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const projects = document.querySelectorAll('.project');
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      projects.forEach(project => {
+        const text = project.textContent.toLowerCase();
+        project.style.display = text.includes(query) ? 'flex' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

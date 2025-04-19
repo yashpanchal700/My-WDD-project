@@ -1,0 +1,224 @@
+/* General Styling */
+@font-face {
+    font-family: 'CustomFont3'; /* Name you will use in CSS */
+    src: url('montserrat.bold.ttf') format('truetype'); /* Path to your font file */
+  }
+  
+  body {
+    font-family: 'CustomFont3'; /* Name you will use in CSS */
+    src: url('montserrat.bold.ttf') format('truetype'); /* Path to your font file */
+    background: linear-gradient(135deg, #18181a, #3a3c4a); /* Neutral gradient */
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-image: url("2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+  }
+  main label{
+    font-size:1.2em;
+    color:#ffffff;
+    text-shadow: #ffffff;
+  }
+  /* Header Styling */
+  header {
+  
+    padding: 15px;
+   
+    margin-bottom: 30px;
+  }
+  @font-face {
+    font-family: 'CustomFont'; /* Name you will use in CSS */
+    src: url('source-sans-pro.black.ttf') format('truetype'); /* Path to your font file */
+  }
+  header h1 {
+    font-size: 5em;
+    font-family: 'CustomFont'; /* Name you will use in CSS */
+    src: url('source-sans-pro.black.ttf') format('truetype'); /* Path to your font file */
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background: linear-gradient(180deg,#fdfdfd,#6e6e6e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   text-shadow: 2px 2px 8px rgba(87, 86, 86, 0.192);
+   
+  }
+  
+  
+  /* Input Field Styling */
+  input[type="datetime-local"] {
+    margin: 20px 0;
+    padding: 15px;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 250px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  input:focus {
+    transform: scale(1.05);
+    outline: none;
+    border: 2px solid #b1b1b1;
+  }
+  
+  /* Button Styling */
+  
+  button {
+    padding: 15px 40px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #000000, #292828); 
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #000000, #292828);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 600px) {
+    header h1 {
+      font-size: 2.5em;
+    }
+  
+    main {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .digit {
+      font-size: 3.5em;
+    }
+  
+    button {
+      font-size: 1.2em;
+      padding: 10px 20px;
+    }
+  }
+  
+  
+  /* Countdown Timer Container Styling */
+  main {
+    background: rgba(247, 247, 247, 0.089);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.3); 
+  }
+  
+  
+  
+  
+  /* Individual Digit Container */
+  .digit-container {
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+  
+  
+  
+  .digit:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+  }
+  
+  
+  
+  /* Initially Hide Countdown Box */
+  .countdown {
+    display: none; /* Hide countdown box initially */
+    opacity: 0;    
+    transition: opacity 0.3s ease-in-out; 
+  }
+  
+  
+  .countdown.show {
+    display: flex; 
+    opacity: 1;   
+  }
+  
+  /* ... (Your existing CSS code) ... */
+
+.countdown {
+  display: flex;
+  font-size: 1em;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.958); /* Light white background with transparency */
+  border: 1px solid rgba(200, 200, 200, 0.515); /* Light gray border */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+  color: #333; /* Darker text for readability on light background */
+}
+
+.digit {
+  font-size: 3em;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(230, 230, 230, 0.7); /* Slightly darker digit background */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+  color: #333;
+}
+
+.label {
+  font-size: 0.9em;
+  margin-top: 5px;
+  color: #666; /* Slightly darker label text */
+}
+
+/* ... (Your existing CSS code) ... */
+  
+#work-name {
+  margin: 20px 0;
+  padding: 15px;
+  font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid rgba(255, 255, 255, 0.7); /* Subtle border */
+  border-radius: 20px; /* Rounded corners */
+  width: 90%;
+  max-width: 250px;
+  background: rgba(255, 255, 255, 0.9); /* Light white background */
+  color: #333; /* Darker text for contrast */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Soft shadow for a fantastic look */
+  transition: transform 0.3s ease-in-out;
+}
+
+#work-name:focus {
+  transform: scale(1.05); /* Slight zoom effect */
+  outline: none; /* Remove default outline */
+  border: 2px solid #242424; /* Highlighted border on focus */
+}

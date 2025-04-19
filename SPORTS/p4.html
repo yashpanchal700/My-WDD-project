@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Countdown Timer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>SPORTS</h1>
+  </header>
+
+  <main>
+    <label for="sports-name">Enter Sports Name:</label>
+    <input type="text" id="sports-name" placeholder="e.g., Football" />
+    <label for="date-picker">Select Date & Time:</label>
+    <input type="datetime-local" id="date-picker" />
+    <button id="start-timer">Start Countdown</button>
+
+    <div id="countdown-display" class="countdown"></div>
+    <video id="football-animation" src="rotating_football.webm" alt="Rotating Football" style="width: 300px; height: auto; opacity: 1;" loop muted playsinline autoplay></video>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
